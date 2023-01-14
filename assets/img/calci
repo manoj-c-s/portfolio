@@ -1,0 +1,2474 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/v2/images/favicon.ico">
+    <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/static/CACHE/css/output.3d2641d07b0b.css" type="text/css">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+
+    <link rel="canonical" href="https://www.sayonetech.com/blog/how-build-iphone-calculator-using-flutter/">
+    <title>How to build iPhone Calculator using Flutter | </title>
+    <meta name="google-site-verification" content="ngzmP7Edk5s4_WDxqHK5GIXx6sZN4hPW1Y2j3IMXQa4"/>
+    <meta name="msvalidate.01" content="751D325BB2295F849FFA78F4D08FCD9E"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-43709275-1');
+    </script>
+    <noscript><iframe src="https://www.googleoptimize.com/optimize.js?id=OPT-PSK7R5J"></iframe></noscript>
+    
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Sayone Technologies",
+        "url": "https://sayonetech.com/",
+        "logo": "https://www.sayonetech.com/static/v2/images/logo.svg",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone":[ "+1-707-771-0038, +91-72931-52324"]
+        },
+        "address":{
+            "@type": "PostalAddress",
+            "streetAddress": "Unit No. 503, 5th floor World Trade Center",
+            "addressLocality": "Kochi",
+            "addressCountry": "India",
+            "postalCode": "682042"
+        },
+
+        "sameAs": [
+            "https://www.facebook.com/sayonetech",
+            "https://twitter.com/sayonetech",
+            "https://www.linkedin.com/company/sayone/"
+        ]
+    }
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Ads: 967907066 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-967907066"></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-967907066');
+
+    </script>
+
+    
+<meta name="Title" content="How to build iPhone Calculator using Flutter"/>
+<meta name="Description" content="It was a simple idea to create a replica of iPhone’s system calculator in Flutter. The design is uncomplicated and the program logic is well-known. I am trying to focus on the UI designhere, since th…"/>
+<meta name="Keywords" content="IPHONE CALCULATOR USING FLUTTER"/>
+<meta property="og:title" content="How to build iPhone Calculator using Flutter"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:image"
+      content="https://www.sayonetech.com/media/zinnia/PWA2.jpg"/>
+<meta property="og:image:width" content="600"/>
+<meta property="og:image:height" content="315"/>
+<meta property="og:url" content="https://www.sayonetech.com/blog/how-build-iphone-calculator-using-flutter/"/>
+<meta property="og:description" content="It was a simple idea to create a replica of iPhone’s system calculator in Flutter. The design is uncomplicated and the program logic is well-known. I am trying to focus on the UI designhere, since th…"/>
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@sayonetech">
+<meta name="twitter:title" content="How to build iPhone Calculator using Flutter">
+<meta name="twitter:description" content="It was a simple idea to create a replica of iPhone’s system calculator in Flutter. The design is uncomplicated and the program logic is well-known. I am trying to focus on the UI designhere, since th…">
+<meta name="twitter:creator" content="@sayonetech">
+<meta name="twitter:image"
+      content="https://www.sayonetech.com/media/zinnia/PWA2.jpg"/>
+
+    
+    
+</head>
+<body>
+<div class="main-wrapper">
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <h1 class="m-0">
+                    <div class="d-flex"><a class="navbar-brand" href="/">
+                        <img class="d-none d-sm-inline-block" src="/static/v2/images/logo.svg">
+                        <img class="d-inline-block d-sm-none" src="/static/v2/images/logo-mob.png" alt="Mobile Logo">
+                    </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"
+                                  style="background:url('/static/v2/images/icon.svg') no-repeat right;"></span>
+                        </button>
+                    </div>
+                </h1>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Services
+                            </a>
+                            <div id="navmobdropdown" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item"
+                                   href="/services/webapp-development-company-usa/">Web
+                                    Application</a>
+                                <a class="dropdown-item"
+                                   href="/services/mobileapp-development-company-usa/">Mobile
+                                    Application</a>
+                                <a class="dropdown-item"
+                                   href="/services/e-commerce-development-company-usa/">E-commerce</a>
+                                <a class="dropdown-item"
+                                   href="/services/microservices-development-company-usa/">Micro Services Architecture</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/case-studies/">Case study</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about/">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/career/">Careers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/resources/">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blog/">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <form class="form-inline my-2 my-lg-0">
+                    <a class="btn btn-outline-blue" href="/contact/">Contact us</a>
+                </form>
+                
+            </nav>
+        </div>
+    </header>
+    <section class="sub-in-banner blog-banner">
+        
+
+        
+    </section>
+    
+<section class="section pb-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <div class="blog-post-detail">
+                    <div class="tag-time-sec">
+                        <div class="blue-tag">iOS Development</div>
+                        <span class="tm">5 min read</span>
+                    </div>
+                    <div class="main-head">
+                        <h4 class="title2">How to build iPhone Calculator using Flutter</h4>
+                    </div>
+                    
+                        <span class="blog-author-detail-area mb-3">By <span class="poppins-medium nm"><a href="">sayoneadmin</a></span></span>
+                    
+                    
+                    <img loading="lazy" src="/media/cache/4d/14/4d1461b8c385a96bb14fd0102f55432e.jpg" class="img-fluid post-img"
+                         alt="Application development company">
+                    
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="mb-5">
+                    <div class="main-head">
+                        <h6 class="title6">Share This Article</h6>
+                    </div>
+                    <ul class="social-area hrzndl">
+                        <li>
+                            <a target="_blank"
+                               href="https://www.facebook.com/sharer/sharer.php?u=https://www.sayonetech.com/blog/how-build-iphone-calculator-using-flutter/">
+                                <svg width="30.9" height="30.9" viewBox="0 0 30.9 30.9">
+                                    <path class="a"
+                                          d="M30.9,15.45A15.45,15.45,0,1,0,15.45,30.9c.091,0,.181,0,.272-.006V18.872H12.4V15h3.319V12.155c0-3.3,2.016-5.1,4.961-5.1a26.964,26.964,0,0,1,2.975.151v3.452H21.63c-1.6,0-1.913.76-1.913,1.877V15h3.832l-.5,3.869H19.717V30.3A15.455,15.455,0,0,0,30.9,15.45Z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                               href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.sayonetech.com/blog/how-build-iphone-calculator-using-flutter/">
+                                <svg width="30.9" height="30.9" viewBox="0 0 30.9 30.9">
+                                    <path class="a"
+                                          d="M15.45,0A15.45,15.45,0,1,0,30.9,15.45,15.452,15.452,0,0,0,15.45,0ZM10.96,23.356H7.2V12.036H10.96ZM9.079,10.49H9.055A1.961,1.961,0,1,1,9.1,6.578a1.962,1.962,0,1,1-.025,3.912ZM24.528,23.356H20.766V17.3c0-1.522-.545-2.56-1.906-2.56a2.06,2.06,0,0,0-1.931,1.376,2.577,2.577,0,0,0-.124.918v6.322H13.043s.049-10.258,0-11.32h3.763v1.6A3.736,3.736,0,0,1,20.2,11.77c2.476,0,4.332,1.618,4.332,5.095Zm0,0"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                               href="https://twitter.com/intent/tweet?text=https://www.sayonetech.com/blog/how-build-iphone-calculator-using-flutter/">
+                                <svg width="30.9" height="30.9" viewBox="0 0 30.9 30.9">
+                                    <path class="a"
+                                          d="M15.45,0A15.45,15.45,0,1,0,30.9,15.45,15.452,15.452,0,0,0,15.45,0ZM22.5,12.046q.01.228.01.458a10.021,10.021,0,0,1-10.09,10.09h0A10.038,10.038,0,0,1,6.989,21a7.212,7.212,0,0,0,.846.049,7.115,7.115,0,0,0,4.4-1.518,3.55,3.55,0,0,1-3.313-2.463,3.534,3.534,0,0,0,1.6-.061,3.547,3.547,0,0,1-2.845-3.476c0-.016,0-.03,0-.045a3.522,3.522,0,0,0,1.606.443A3.549,3.549,0,0,1,8.192,9.2,10.068,10.068,0,0,0,15.5,12.9a3.548,3.548,0,0,1,6.043-3.234A7.113,7.113,0,0,0,23.8,8.807a3.56,3.56,0,0,1-1.559,1.961,7.073,7.073,0,0,0,2.036-.558A7.207,7.207,0,0,1,22.5,12.046Zm0,0"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/917293152324">
+                                <svg width="29.468" height="29.468" viewBox="0 0 29.468 29.468">
+                                    <path id="Icon_ionic-logo-whatsapp" data-name="Icon ionic-logo-whatsapp"
+                                          d="M17.251,2.25A14.411,14.411,0,0,0,2.785,16.6a14.206,14.206,0,0,0,2.076,7.412l-2.611,7.7,8.009-2.544A14.491,14.491,0,0,0,31.718,16.6,14.411,14.411,0,0,0,17.251,2.25Zm7.194,19.806a3.737,3.737,0,0,1-2.559,1.649c-.678.036-.7.526-4.4-1.081s-5.923-5.515-6.1-5.767a7.094,7.094,0,0,1-1.365-3.845A4.1,4.1,0,0,1,11.434,10a1.417,1.417,0,0,1,1-.422c.291,0,.48-.009.7,0s.539-.045.819.7.95,2.575,1.036,2.762a.67.67,0,0,1,.007.643,2.512,2.512,0,0,1-.392.6c-.193.207-.406.463-.578.622-.192.175-.393.367-.191.741a11.07,11.07,0,0,0,1.959,2.614,10.093,10.093,0,0,0,2.9,1.928c.363.2.579.176.8-.061s.963-1.036,1.223-1.392.5-.288.838-.153,2.115,1.089,2.478,1.286.6.3.691.454A3.038,3.038,0,0,1,24.445,22.056Z"
+                                          transform="translate(-2.25 -2.25)" fill="#aab5c1"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="">
+                    <div class="main-head">
+                        <h6 class="title6">Migrating Your Application from Monolithic to Microservices Architecture</h6>
+                    </div>
+                    <p class="p_hometag">Monolith to Microservices app migration strategy should be formed or set up according to your unique business needs and goals.</p><br>
+                    <a class="btn btn-outline-blue" data-toggle="modal"
+                       href="#resource-download-modal"
+                       data-resource-id="18"
+                       data-resource-title=""
+                       data-resource-description="Monolith to Microservices app migration strategy should be formed or set up according to your unique business needs and goals."
+                       data-resource-action="/e-book-download/18/">
+                        Download Ebook
+                    </a>
+                </div>
+                
+
+            </div>
+        </div>
+        <hr class="mt-4 mb-4"/>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <p class="p_hometag">It was a simple idea to create a replica of iPhone’s system calculator in Flutter. The design is uncomplicated and the program logic is well-known. I am trying to focus on the UI designhere, since the logic can be tedious to teach.</p><br>
+                <div class="row mb-5">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <div class="table-cont-box">
+                            <div class="head">
+                                <h6 class="title6 poppins-semi-bold">Table of Contents</h6>
+                            </div>
+                            <div class="longEnough mCustomScrollbar" data-mcs-theme="dark">
+                                <ol class="table-cont-box-list" id="table-cont-box-list">
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 pl-md-0">
+                        <div class="sbscrb-blog-box-grey-vrtcl">
+                            <div id="valid-subscribe" class="thanks-msg w-100" style="display:none">
+                                <i class="fa fa-check-circle"></i>
+                                <h3 class="title4 poppins-semi-bold">Thank you! You have been subscribed.</h3>
+                            </div>
+                            <div class="after-subscribe d-flex align-items-center">
+                                <img class="after-subscribe mr-2" src="/static/v2/images/subscribe-blog-icon.png"/>
+                                <h4 class="after-subscribe title4 poppins-semi-bold">Subscribe to </br>Our Blog</h4>
+                            </div>
+                            <p class="after-subscribe">We're committed to your privacy. SayOne uses the information you provide to us to contact
+                                you about our relevant content, products, and services. check out our <span
+                                        class="poppins-semi-bold">privacy policy.</span></p>
+                            <form class="after-subscribe" id="subscribe-form_2" method="post" action="/subscribe/">
+                                <input type="hidden" name="csrfmiddlewaretoken" value="tjv9ujehDYSswyAsfy7NsiaLaTzbyDYqtGyTNRbzwRCwXuQWMLKfQH9JBx55Sjla">
+                                <div class="form-group">
+                                    <label>Email Address</label>
+                                    <input class="form-control" name="email" placeholder="Your email address"
+                                           type="text">
+                                </div>
+                                <div id="subscribe-email-error_2" class="field-error"></div>
+
+                                <button class="btn btn-fill-blue" type="submit" tabindex="0">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-5 blog-detail-box"><p>&nbsp;</p>
+
+<h1><strong>How to build iPhone Calculator using Flutter</strong></h1>
+
+<p>It was a simple idea to create a replica of iPhone&rsquo;s system calculator in Flutter. The design is uncomplicated and the program logic is well-known. I am trying to focus on the UI designhere, since the logic can be tedious to teach.&nbsp;</p>
+
+<p>You can check out our&nbsp;<a href="https://github.com/sayonetech/flutter_calculator" target="_blank">Git Repo</a>&nbsp;to get a complete idea.</p>
+
+<h2>Building iPhone Calculator App using Flutter&nbsp;</h2>
+
+<p><strong>This is the UI we got to design.</strong></p>
+
+<p><img alt="calculator-design" src="https://www.sayonetech.com/media/upload/2018/09/28/calculator-design_G6px8mN.png" /></p>
+
+<p><strong>Now, let&rsquo;s decompose this view into a number of components.</strong></p>
+
+<ol>
+	<li>The operands,operator,result and the buttons are vertically aligned using a column widget.</li>
+	<li>Now, we use 5 row widgets to arrange buttons horizontally.</li>
+	<li>Buttons are of different designs. So, we need to create separate widgets for each type.</li>
+</ol>
+
+<p><strong>The Number Button is designed like this:</strong></p>
+
+<table>
+	<tbody>
+		<tr>
+			<td>&nbsp;</td>
+			<td>import &#39;package:flutter/material.dart&#39;;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>class NumberButton extends StatelessWidget {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>NumberButton({this.text,this.onPressed});</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>final String text;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>final Function onPressed;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>@override</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Widget build(BuildContext context) {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>return Padding(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>padding: const EdgeInsets.all(5.0),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>child: RawMaterialButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>shape: const CircleBorder(),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>constraints: BoxConstraints.tight(Size(60.0, 60.0)),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed:onPressed,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>child: Text(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>style: TextStyle(color: Colors.white, fontSize: 20.0),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>fillColor: Color.fromRGBO(56, 54, 56, 1.0),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>));</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><a href="https://gist.github.com/yadu-sayone/d33a7167451fe4254dc917477524b3a4/raw/b9c5605296adc03b4005a7e721f1edc6b319641d/Number-button.dart">view raw</a><a href="https://gist.github.com/yadu-sayone/d33a7167451fe4254dc917477524b3a4#file-number-button-dart">Number-button.dart</a>&nbsp;hosted with ❤ by&nbsp;<a href="https://github.com/">GitHub</a></p>
+
+<p>The Number Button is a Stateless widget which takes a String &ldquo;text&rdquo; and a function &ldquo;onPressed&rdquo;. It is implemented using a RawMaterialButton because we needed the button size to be extra large. The shape is given to be a circle of size 60.</p>
+
+<p>The Zero button has a bit different UI, so I created a custom widget for it.</p>
+
+<table>
+	<tbody>
+		<tr>
+			<td>&nbsp;</td>
+			<td>import &#39;package:flutter/material.dart&#39;;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>class ZeroButton extends StatelessWidget {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>ZeroButton({this.onPressed});</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>final Function onPressed;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>@override</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Widget build(BuildContext context) {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>return Padding(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>padding: const EdgeInsets.all(5.0),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>child: Container(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>height: 60.0,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>width: MediaQuery.of(context).size.width / 2.5,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>decoration: BoxDecoration(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>borderRadius: BorderRadius.circular(25.0),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>color: Color.fromRGBO(56, 54, 56, 1.0)),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>child: MaterialButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed: onPressed,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>child: Text(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&quot;0&quot;,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>style: TextStyle(color: Colors.white, fontSize: 20.0),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><a href="https://gist.github.com/yadu-sayone/ca086525056dd5517c96018418c2f0a4/raw/4cd0a14409f92b54316d254e4c9ee545b0a79069/Custom-Widget-ZeroButton.dart">view raw</a><a href="https://gist.github.com/yadu-sayone/ca086525056dd5517c96018418c2f0a4#file-custom-widget-zerobutton-dart">Custom-Widget-ZeroButton.dart</a>&nbsp;hosted with ❤ by&nbsp;<a href="https://github.com/">GitHub</a></p>
+
+<p>The width of the zero button is given in relative to the screen width.<br />
+Now there is Binary Operator button and Unary Operator Button which is different from each other only in text color, background color and its action.</p>
+
+<table>
+	<tbody>
+		<tr>
+			<td>&nbsp;</td>
+			<td>import &#39;package:flutter/material.dart&#39;;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>class BinaryOperatorButton extends StatelessWidget {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>BinaryOperatorButton({this.onPressed,this.text});</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>final text;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>final Function onPressed;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>@override</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Widget build(BuildContext context) {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>return Padding(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>padding: const EdgeInsets.all(5.0),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>child: RawMaterialButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>shape: const CircleBorder(),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>constraints: BoxConstraints.tight(Size(60.0, 60.0)),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed:onPressed,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>child: Text(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>style: TextStyle(color: Colors.white, fontSize: 20.0),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>fillColor: Colors.orange,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>));</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><a href="https://gist.github.com/yadu-sayone/6e42571b2097b1446206fac7a1730a9b/raw/f3f5ecdcc19be0556f05d7bbbc1edcec1a79ed45/Button1.dart">view raw</a><a href="https://gist.github.com/yadu-sayone/6e42571b2097b1446206fac7a1730a9b#file-button1-dart">Button1.dart</a>&nbsp;hosted with ❤ by&nbsp;<a href="https://github.com/">GitHub</a></p>
+
+<table>
+	<tbody>
+		<tr>
+			<td>&nbsp;</td>
+			<td>import &#39;package:flutter/material.dart&#39;;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>class UnaryOperatorButton extends StatelessWidget {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>UnaryOperatorButton({this.text,this.onPressed});</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>final String text;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>final Function onPressed;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>@override</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Widget build(BuildContext context) {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>return Padding(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>padding: const EdgeInsets.all(5.0),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>child: RawMaterialButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>shape: const CircleBorder(),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>constraints: BoxConstraints.tight(Size(60.0, 60.0)),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed:onPressed,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>child: Text(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>style: TextStyle(color: Colors.black, fontSize: 20.0),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>fillColor: Colors.grey,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>));</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><a href="https://gist.github.com/yadu-sayone/69bbb0728423ddc8e4ebb9e77b4c8643/raw/560e8b12e6904be7c21cb6ff2faa5d95e1e27f8d/Button2.dart">view raw</a><a href="https://gist.github.com/yadu-sayone/69bbb0728423ddc8e4ebb9e77b4c8643#file-button2-dart">Button2.dart</a>&nbsp;hosted with ❤ by&nbsp;<a href="https://github.com/">GitHub</a></p>
+
+<p>Now the entire layout is done in calculator.dart. The build method of it is given below.</p>
+
+<table>
+	<tbody>
+		<tr>
+			<td>&nbsp;</td>
+			<td>@override</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Widget build(BuildContext context) {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>return new Scaffold(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>backgroundColor: Theme.of(context).primaryColor,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>body: SafeArea(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>child: Padding(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>padding: const EdgeInsets.all(8.0),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>child: Column(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>children: &lt;Widget&gt;[</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Expanded(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>child: Container(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>child: Align(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>alignment: Alignment.bottomRight,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>child: Column(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>crossAxisAlignment: CrossAxisAlignment.end,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>mainAxisAlignment: MainAxisAlignment.end,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>children: &lt;Widget&gt;[</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>operand1 != null</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>? SingleChildScrollView(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>scrollDirection: Axis.horizontal,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>child: Text(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>operand1 is double</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>? operand1.toStringAsFixed(2)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>: operand1.toString(),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>style: _whiteTextStyle,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>textAlign: TextAlign.right,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>: Container(),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>operator != null</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>? Text(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>operator.toString(),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>style: _whiteTextStyle,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>textAlign: TextAlign.right,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>: Container(),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>operand2 != null</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>? Text(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>operand2.toString(),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>style: _whiteTextStyle,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>textAlign: TextAlign.right,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>: Container(),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>result != null</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>? Divider(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>height: 5.0,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>color: Colors.white,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>: Container(),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>result != null</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>? SingleChildScrollView(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>scrollDirection: Axis.horizontal,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>child: Text(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>result is double</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>? result.toStringAsFixed(2)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>: result.toString(),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>style: _whiteTextStyle,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>textAlign: TextAlign.right,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>: Container(),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>],</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Row(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>mainAxisAlignment: MainAxisAlignment.spaceBetween,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>children: &lt;Widget&gt;[</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>UnaryOperatorButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text: &quot;AC&quot;,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed: () {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>_otherOperationAction(OtherOperation.clear);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>},</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>UnaryOperatorButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text: plus_or_minus_sign,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed: (){_unaryOperationAction(UnaryOperation.changeSign);},</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>UnaryOperatorButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text: percent_sign,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed: (){_unaryOperationAction(UnaryOperation.percent);},</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>BinaryOperatorButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text: divide_sign,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed: () {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>_binaryOperationAction(BinaryOperation.divide);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>},</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>],</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Row(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>mainAxisAlignment: MainAxisAlignment.spaceBetween,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>children: &lt;Widget&gt;[</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>NumberButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text: &quot;7&quot;,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed: () {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>_numberButtonAction(&quot;7&quot;);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>NumberButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text: &quot;8&quot;,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed: () {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>_numberButtonAction(&quot;8&quot;);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>NumberButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text: &quot;9&quot;,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed: () {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>_numberButtonAction(&quot;9&quot;);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>BinaryOperatorButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text: multiply_sign,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed: () {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>_binaryOperationAction(BinaryOperation.multiply);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>},</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>],</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Row(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>mainAxisAlignment: MainAxisAlignment.spaceBetween,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>children: &lt;Widget&gt;[</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>NumberButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text: &quot;4&quot;,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed: () {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>_numberButtonAction(&quot;4&quot;);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>NumberButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text: &quot;5&quot;,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed: () {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>_numberButtonAction(&quot;5&quot;);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>NumberButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text: &quot;6&quot;,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed: () {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>_numberButtonAction(&quot;6&quot;);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>BinaryOperatorButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text: minus_sign,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed: () {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>_binaryOperationAction(BinaryOperation.subtract);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>},</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>],</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Row(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>mainAxisAlignment: MainAxisAlignment.spaceBetween,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>children: &lt;Widget&gt;[</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>NumberButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text: &quot;1&quot;,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed: () {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>_numberButtonAction(&quot;1&quot;);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>NumberButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text: &quot;2&quot;,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed: () {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>_numberButtonAction(&quot;3&quot;);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>NumberButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text: &quot;3&quot;,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed: () {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>_numberButtonAction(&quot;3&quot;);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>}),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>BinaryOperatorButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text: add_sign,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed: () {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>_binaryOperationAction(BinaryOperation.add);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>},</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>],</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Row(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>mainAxisAlignment: MainAxisAlignment.spaceBetween,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>children: &lt;Widget&gt;[</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>ZeroButton(onPressed: (){_zeroButtonAction();},),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>BinaryOperatorButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text: &quot;.&quot;,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed: () {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>_otherOperationAction(OtherOperation.addDecimal);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>},</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>BinaryOperatorButton(</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>text: equal_sign,</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>onPressed: () {</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>_otherOperationAction(OtherOperation.equals);</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>},</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>)</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>],</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>],</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>),</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>);</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><a href="https://gist.github.com/yadu-sayone/56869cebf5ba97b3dd41a409be7a4cb7/raw/cc665ca30f8451c4c54bae31fd6128dcf3f68ba8/calculator.dart">view raw</a><a href="https://gist.github.com/yadu-sayone/56869cebf5ba97b3dd41a409be7a4cb7#file-calculator-dart">calculator.dart</a>&nbsp;hosted with ❤ by&nbsp;<a href="https://github.com/">GitHub</a></p>
+
+<p>&nbsp;</p>
+
+<h2>The End Result</h2>
+
+<p><img alt="calculator-android-ios" src="https://www.sayonetech.com/media/upload/2018/09/28/flutter-banner_lT4Ux3q.jpg" /></p>
+
+<p>This is how it looks on both the devices. My Flutter experiment has worked out for good. As a part of the SayOne mobile team, I have been working on Flutter since 2017. I have never been this drawn towards any other technology. Stay tuned as we experiment more with Flutter in the coming days!<br />
+<br />
+<strong><a href="https://www.sayonetech.com/e-book-detail/what-does-it-take-to-build-an-application/">Download Now: Development process for the layperson and what does it take to build an application [Get Your Copy]</a></strong></p>
+
+<h3><strong>SayOne&nbsp;Tech&nbsp;</strong></h3>
+
+<p><a href="https://www.sayonetech.com/">SayOne&nbsp;Tech</a>, a technology company with offices in&nbsp;<a href="https://www.sayonetech.com/">India and the USA</a>,&nbsp;has&nbsp;proven expertise&nbsp;and experience&nbsp;in&nbsp;employing&nbsp;emerging technologies to deliver&nbsp;world-class, secure,&nbsp;scalable, and reliable solutions.&nbsp;The tech company strongly believes in&nbsp;empowering their&nbsp;clients to adapt to&nbsp;constantly&nbsp;changing business environments&nbsp;quickly&nbsp;and&nbsp;achieve their goals. The core values that&nbsp;SayOne&nbsp;is c passionate about are integrity, commitment, and transparency.&nbsp;&nbsp;</p>
+
+<p>&nbsp;</p></div>
+                <div class="text-center bg-light-blue-mob p-3 p-sm-0">
+                    <div class="main-head">
+                        <h6 class="title6">Share This Article</h6>
+                    </div>
+                    <ul class="social-area hrzndl justify-content-center m-0">
+                        <li>
+                            <a target="_blank"
+                               href="https://www.facebook.com/sharer/sharer.php?u=https://www.sayonetech.com/blog/how-build-iphone-calculator-using-flutter/">
+                                <svg width="30.9" height="30.9" viewBox="0 0 30.9 30.9">
+                                    <path class="a"
+                                          d="M30.9,15.45A15.45,15.45,0,1,0,15.45,30.9c.091,0,.181,0,.272-.006V18.872H12.4V15h3.319V12.155c0-3.3,2.016-5.1,4.961-5.1a26.964,26.964,0,0,1,2.975.151v3.452H21.63c-1.6,0-1.913.76-1.913,1.877V15h3.832l-.5,3.869H19.717V30.3A15.455,15.455,0,0,0,30.9,15.45Z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                               href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.sayonetech.com/blog/how-build-iphone-calculator-using-flutter/">
+                                <svg width="30.9" height="30.9" viewBox="0 0 30.9 30.9">
+                                    <path class="a"
+                                          d="M15.45,0A15.45,15.45,0,1,0,30.9,15.45,15.452,15.452,0,0,0,15.45,0ZM10.96,23.356H7.2V12.036H10.96ZM9.079,10.49H9.055A1.961,1.961,0,1,1,9.1,6.578a1.962,1.962,0,1,1-.025,3.912ZM24.528,23.356H20.766V17.3c0-1.522-.545-2.56-1.906-2.56a2.06,2.06,0,0,0-1.931,1.376,2.577,2.577,0,0,0-.124.918v6.322H13.043s.049-10.258,0-11.32h3.763v1.6A3.736,3.736,0,0,1,20.2,11.77c2.476,0,4.332,1.618,4.332,5.095Zm0,0"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                               href="https://twitter.com/intent/tweet?text=https://www.sayonetech.com/blog/how-build-iphone-calculator-using-flutter/">
+                                <svg width="30.9" height="30.9" viewBox="0 0 30.9 30.9">
+                                    <path class="a"
+                                          d="M15.45,0A15.45,15.45,0,1,0,30.9,15.45,15.452,15.452,0,0,0,15.45,0ZM22.5,12.046q.01.228.01.458a10.021,10.021,0,0,1-10.09,10.09h0A10.038,10.038,0,0,1,6.989,21a7.212,7.212,0,0,0,.846.049,7.115,7.115,0,0,0,4.4-1.518,3.55,3.55,0,0,1-3.313-2.463,3.534,3.534,0,0,0,1.6-.061,3.547,3.547,0,0,1-2.845-3.476c0-.016,0-.03,0-.045a3.522,3.522,0,0,0,1.606.443A3.549,3.549,0,0,1,8.192,9.2,10.068,10.068,0,0,0,15.5,12.9a3.548,3.548,0,0,1,6.043-3.234A7.113,7.113,0,0,0,23.8,8.807a3.56,3.56,0,0,1-1.559,1.961,7.073,7.073,0,0,0,2.036-.558A7.207,7.207,0,0,1,22.5,12.046Zm0,0"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/917293152324">
+                                <svg width="29.468" height="29.468" viewBox="0 0 29.468 29.468">
+                                    <path id="Icon_ionic-logo-whatsapp" data-name="Icon ionic-logo-whatsapp"
+                                          d="M17.251,2.25A14.411,14.411,0,0,0,2.785,16.6a14.206,14.206,0,0,0,2.076,7.412l-2.611,7.7,8.009-2.544A14.491,14.491,0,0,0,31.718,16.6,14.411,14.411,0,0,0,17.251,2.25Zm7.194,19.806a3.737,3.737,0,0,1-2.559,1.649c-.678.036-.7.526-4.4-1.081s-5.923-5.515-6.1-5.767a7.094,7.094,0,0,1-1.365-3.845A4.1,4.1,0,0,1,11.434,10a1.417,1.417,0,0,1,1-.422c.291,0,.48-.009.7,0s.539-.045.819.7.95,2.575,1.036,2.762a.67.67,0,0,1,.007.643,2.512,2.512,0,0,1-.392.6c-.193.207-.406.463-.578.622-.192.175-.393.367-.191.741a11.07,11.07,0,0,0,1.959,2.614,10.093,10.093,0,0,0,2.9,1.928c.363.2.579.176.8-.061s.963-1.036,1.223-1.392.5-.288.838-.153,2.115,1.089,2.478,1.286.6.3.691.454A3.038,3.038,0,0,1,24.445,22.056Z"
+                                          transform="translate(-2.25 -2.25)" fill="#aab5c1"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container">
+        <div class="row sbscrb-blog-box-grey-hrzndl">
+            <div class="col-sm-5 left-area d-md-block d-none">
+                <div class="right-absolute-img w-100"
+                     style="background:url('/static/v2/images/subscribe-blogdtl-img.jpg') no-repeat center; background-size:cover"></div>
+            </div>
+            <div class="col-md-7 right-area">
+                <h2 class="after-subscribe2 title2 poppins-semi-bold">Subscribe to </br>Our Blog</h2>
+                <div id="valid-subscribe2" class="thanks-msg w-100" style="display:none">
+                    <i class="fa fa-check-circle"></i>
+                    <h3 class="title4 poppins-semi-bold">Thank you! You have been subscribed.</h3>
+                </div>
+                <form id="subscribe-form_3" class="after-subscribe2" method="post" action="/subscribe/">
+                    <div class="after-subscribe2 d-flex align-items-end flex-column flex-sm-row mb-3">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="tjv9ujehDYSswyAsfy7NsiaLaTzbyDYqtGyTNRbzwRCwXuQWMLKfQH9JBx55Sjla">
+                        <div class="form-group mr-0 mr-sm-2 mb-3 mb-sm-0 w-100 w-sm-auto">
+                            <label class="d-none d-sm-block">Email Address</label>
+                            <input class="form-control" name="email" placeholder="Your Email Address" type="text">
+                        </div>
+                        <div id="subscribe-email-error_3" class="field-error"></div>
+                        <button class="btn btn-fill-blue w-100 w-sm-auto" type="submit" tabindex="0">Subscribe</button>
+                    </div>
+                </form>
+                <p class="after-subscribe2">We're committed to your privacy. SayOne uses the information you provide to us to contact you about
+                    our relevant content, products, and services. check out our <span class="poppins-semi-bold">privacy policy.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<div class="modal fade download-ebook-modal" id="resource-download-modal" role="dialog"
+     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div id="resource-download-div-2" class="modal-content">
+            <div class="modal-body">
+                <div class="row m-0">
+                    <div class="col-md-6 img-area d-none d-md-flex">
+                        
+                        <img loading="lazy" class="img-fluid" src="/media/cache/22/03/220341b92221c77f841c033df7ab4458.jpg"
+                             alt="Web app development company in USA"/>
+
+                        
+                    </div>
+
+                    <div class="col-md-6 cont-area">
+                        <div class="inn">
+                            <h2 class="title2 poppins-semi-bold mb-3">Migrating Your Application from Monolithic to Microservices Architecture</h2>
+                            <p class="mb-4">Monolith to Microservices app migration strategy should be formed or set up according to your unique business needs and goals.</p>
+                            <div>
+                                <form id="resource-download-form"
+                                      action="/e-book-download/18/"
+                                      class="d-block" method="post">
+                                    <input type="hidden" name="csrfmiddlewaretoken" value="tjv9ujehDYSswyAsfy7NsiaLaTzbyDYqtGyTNRbzwRCwXuQWMLKfQH9JBx55Sjla">
+                                    <div class="pop-form-cont">
+                                        <div class="form-group">
+                                            <input type="text" name="name" class="form-control"
+                                                   placeholder="Full Name">
+                                            <div id="resource-name-error" class="field-error"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="email" class="form-control"
+                                                   placeholder="Email">
+                                            <div id="resource-email-error" class="field-error"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4 pr-0">
+                                                <div class="form-group">
+                                                    <input type="hidden" id="id_mobile_0" name="mobile_0"
+                                                           class="form-control mobile-country-code" value="+1">
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="form-group">
+                                                    <input type="text" id="id_mobile_1" name="mobile_1"
+                                                           class="form-control " placeholder="Phone Number">
+                                                    <div id="resource-mobile-error" class="field-error"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-blue mr-sm-3"
+                                                data-dismiss="modal">CANCEL
+                                        </button>
+                                        <div class="popup-sigle-btn-wrap text-center m-t-20 m-b-20">
+                                            <button type="submit"
+                                                    class="btn btn-outline-blue mr-sm-3 resource-download-btn"
+                                                    data-resource-id="18"
+                                                    data-resource-title="Migrating Your Application from Monolithic to Microservices Architecture"
+                                                    data-resource-description="Monolith to Microservices app migration strategy should be formed or set up according to your unique business needs and goals."
+                                                    data-resource-action="/e-book-download/18/">
+                                                Download
+                                            </button>
+                                        </div>
+                                    </div>
+                            </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+    
+    
+    
+    
+
+<footer class="footer">
+    <div class="whatsapp-wrap">
+        <a href="https://wa.me/917293152324" target="_blank" class="whatsapp-fixed" aria-label="Link to connect to whatsapp">
+            <i class="fa fa-whatsapp  bounce-1"></i>
+        </a>
+    </div>
+    <div class="foot-cont-sec section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-4 border-right-grey foot-col">
+                    <h6 class="title6">SAYONE</h6>
+                    <ul class="footer-list">
+                        <li><a href="/about/">About SayOne</a></li>
+                        <li><a href="/case-studies/">Case Studies</a></li>
+                        <li><a href="/career/">Careers</a></li>
+                        <li><a href="/resources/">Resources</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/contact/">Contact us</a></li>
+                        <li><a href="/privacy-cookies/">Privacy policy</a></li>
+                        <li><a href="/terms-of-use/">Terms of Use</a></li>
+                    </ul>
+                        <a class="link-btn mt-3" href="/home-india">GO TO INDIAN WEBSITE</a>
+                </div>
+                <div class="col-lg-6 col-sm-8 border-right-grey pl-xl-5 pr-xl-5 foot-col">
+                    <h6 class="title6">SERVICES</h6>
+                    <ul class="footer-list column-2">
+                        <li><a href="/services/webapp-development-company-usa/">Web Application</a></li>
+                        <li><a href="/services/mobileapp-development-company-usa/">Mobile Application</a></li>
+                        <li><a href="/services/python-development-company-usa/">Python Development</a></li>
+                        <li><a href="/services/javaspringboot-development-company-usa/">Springboot Development</a></li>
+                        <li><a href="/services/react-js-development-company-usa/">React js Development</a></li>
+                        <li><a href="/services/angular-js-development-company-usa/">Angular js Development</a></li>
+                        <li><a href="/services/ios-development-company-usa/">IOS Development</a></li>
+                        <li><a href="/services/android-development-company-usa/">Android Development</a></li>
+                        <li><a href="/services/react-native-development-company-usa/">React Native Development</a></li>
+                        <li><a href="/services/microservices-development-company-usa/">Micro Services Architecture</a></li>
+                        <li><a href="/services/flutter-development-company-usa/">Flutter Development</a></li>
+                        <li><a href="/services/cross-platform-development-company-usa/">Cross-Platform Development</a></li>
+                        <li><a href="/services/e-commerce-development-company-usa/">Ecommerce Development</a></li>
+                        <li><a href="/solutions/software-development-startups-usa/">Startup</a></li>
+                        <li><a href="/solutions/software-solutions-small-medium-businesses-usa/">SMBs</a></li>
+                        <li><a href="/solutions/software-development-enterprises-usa/">Enterprise</a></li>
+                        <li><a href="/solutions/software-development-digital-agencies-usa/">Agencies</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-12 pl-xl-5 pr-xl-5 foot-col">
+                    <div class="d-flex flex-lg-column">
+                        <p><span class="blue-tag">INDIA OFFICE</span><br/> Unit No. 503, 5th floor,<br/> World Trade Center,<br/> Infopark,<br/> Kochi, India, 682042<br/> Phone : +91 72931 52324</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot-btm-sec">
+        
+<div class="container">
+            <div class="foot-logo-sec">
+                <div class="row d-flex align-items-end flex-wrap">
+                    <div class="col-4 col-md-2 mb-4 text-center">
+                        <img class="img-fluid" src="/static/v2/images/clutch-foot-logo.svg" alt="Clutch Foot Logo"/>
+                    </div>
+                    <div class="col-4 col-md-2 mb-4 text-center">
+                        <img class="img-fluid" loading="lazy" src="/static/v2/images/goodfirm-foot-logo.svg" alt="GoodFirm Foot Logo"/>
+                    </div>
+                    <div class="col-4 col-md-2 mb-4 text-center">
+                        <img class="img-fluid" loading="lazy" src="/static/v2/images/topapp-foot-logo.png" alt="Topapp Foot Logo"/>
+                    </div>
+                    <div class="col-4 col-md-2 mb-4 text-center">
+                        <img class="img-fluid" loading="lazy" src="/static/v2/images/itfirm-foot-logo.png" alt="Itfirm Foot Logo"/>
+                    </div>
+                    <div class="col-4 col-md-2 mb-4 text-center">
+                        <img class="img-fluid" src="/static/v2/images/toprated-foot-logo.png" alt="Toprated Foot Logo"/>
+                    </div>
+                    <div class="col-4 col-md-2 mb-4 text-center">
+                        <img class="img-fluid" loading="lazy" src="/static/v2/images/appdevelopment-foot-logo.png" alt="AppDevelopment Foot Logo"/>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-media-sec d-flex align-items-center justify-content-between flex-column flex-md-row">
+                <div class="order-2 order-md-1 mt-3 mb-3 mt-md-0 mb-md-0">
+                    <a href="mailto:hello@sayonetech.com"><img class="mr-2" src="/static/v2/images/email-icon.svg" alt="Email logo"/>hello@sayonetech.com</a>
+                </div>
+                <ul class="foot-social order-1 order-md-2">
+                    <li>
+                        <a href="https://www.facebook.com/sayonetech" target="_blank" aria-label="Connect to Facebook">
+                            <svg width="30.9" height="30.9" viewBox="0 0 30.9 30.9"><path class="a" d="M30.9,15.45A15.45,15.45,0,1,0,15.45,30.9c.091,0,.181,0,.272-.006V18.872H12.4V15h3.319V12.155c0-3.3,2.016-5.1,4.961-5.1a26.964,26.964,0,0,1,2.975.151v3.452H21.63c-1.6,0-1.913.76-1.913,1.877V15h3.832l-.5,3.869H19.717V30.3A15.455,15.455,0,0,0,30.9,15.45Z"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/sayone/" target="_blank" aria-label="Connect to LinkedIn">
+                            <svg width="30.9" height="30.9" viewBox="0 0 30.9 30.9"><path class="a" d="M15.45,0A15.45,15.45,0,1,0,30.9,15.45,15.452,15.452,0,0,0,15.45,0ZM10.96,23.356H7.2V12.036H10.96ZM9.079,10.49H9.055A1.961,1.961,0,1,1,9.1,6.578a1.962,1.962,0,1,1-.025,3.912ZM24.528,23.356H20.766V17.3c0-1.522-.545-2.56-1.906-2.56a2.06,2.06,0,0,0-1.931,1.376,2.577,2.577,0,0,0-.124.918v6.322H13.043s.049-10.258,0-11.32h3.763v1.6A3.736,3.736,0,0,1,20.2,11.77c2.476,0,4.332,1.618,4.332,5.095Zm0,0"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/sayonetech" target="_blank" aria-label="Connect to Twitter">
+                            <svg width="30.9" height="30.9" viewBox="0 0 30.9 30.9"><path class="a" d="M15.45,0A15.45,15.45,0,1,0,30.9,15.45,15.452,15.452,0,0,0,15.45,0ZM22.5,12.046q.01.228.01.458a10.021,10.021,0,0,1-10.09,10.09h0A10.038,10.038,0,0,1,6.989,21a7.212,7.212,0,0,0,.846.049,7.115,7.115,0,0,0,4.4-1.518,3.55,3.55,0,0,1-3.313-2.463,3.534,3.534,0,0,0,1.6-.061,3.547,3.547,0,0,1-2.845-3.476c0-.016,0-.03,0-.045a3.522,3.522,0,0,0,1.606.443A3.549,3.549,0,0,1,8.192,9.2,10.068,10.068,0,0,0,15.5,12.9a3.548,3.548,0,0,1,6.043-3.234A7.113,7.113,0,0,0,23.8,8.807a3.56,3.56,0,0,1-1.559,1.961,7.073,7.073,0,0,0,2.036-.558A7.207,7.207,0,0,1,22.5,12.046Zm0,0"/></svg>
+                        </a>
+                    </li>
+                </ul>
+                <p class=" order-3">© SayOne Technologies 2023 </p>
+            </div>
+</div>
+    </div>
+</footer>
+
+
+    
+
+     
+<!-- SCHEDULE MEETING Modal -->
+
+<div class="modal fade schedule-meeting-modal" id="schedule-meeting-modal" role="dialog"
+     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="prof-img">
+                        <img loading="lazy" src="/static/v2/images/real-profile-img.webp"/>
+                    </div>
+                    <div>
+                        <h2 class="title2">Meet with Real Prad</h2>
+                        <h5 class="title5 poppins-regular mb-0">Chief Executive Officer</h5>
+                    </div>
+                </div>
+            <form id="schedule-meeting-form" action="/schedule-meeting/" method="post">
+            <input type="hidden" name="csrfmiddlewaretoken" value="tjv9ujehDYSswyAsfy7NsiaLaTzbyDYqtGyTNRbzwRCwXuQWMLKfQH9JBx55Sjla">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 pr-lg-5 left-sec">
+                            <div class="schedule-meet-sec">
+                                <h4 class="title4 poppins-semi-bold mb-4">When do you want to meet?</h4>
+                                <div class="form-group">
+                                    <div class="ui calendar" id="example2">
+                                        <div class="ui input left icon">
+                                        <i class="fa fa-calendar-o icon"></i>
+                                        <input id="id_meeting_date" type="text" class="form-control" placeholder="Select date" name="meeting_date" autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="schedule-meet-sec">
+                                <h4 class="title4 poppins-semi-bold mb-4">How long do you need?</h4>
+                                <div class="btn-radio-area">
+                                    <div class="form-group">
+                                        <div class="btn-radio">
+                                            <input id="radio-1" name="duration" type="radio" class="form-control"
+                                                   value="15min" checked>
+                                            <label for="radio-1" class="rdo-label">15 min</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="btn-radio">
+                                            <input id="radio-2" name="duration" type="radio" class="form-control"
+                                                   value="30min">
+                                            <label for="radio-2" class="rdo-label">30 min</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="schedule-meet-sec">
+                                <h4 class="title4 poppins-semi-bold mb-4">What time works best for you?</h4>
+                                <div class="form-group mb-4">
+                                    
+                                    <select name="customer_timezone" class="form-control">
+                                        
+                                                    <option  value="-12.0">(UTC -12:00) Eniwetok, Kwajalein</option>
+                                        
+                                                    <option  value="-11.0">(UTC -11:00) Midway Island, Samoa</option>
+                                        
+                                                    <option  value="-10.0">(UTC -10:00) Hawaii</option>
+                                        
+                                                    <option  value="-9.0">(UTC -9:00) Alaska</option>
+                                        
+                                                    <option selected value="-8.0">(UTC -8:00) Pacific Time (US Canada)</option>
+                                        
+                                                    <option  value="-7.0">(UTC -7:00) Mountain Time (US Canada)</option>
+                                        
+                                                    <option  value="-6.0">(UTC -6:00) Central Time (US Canada), Mexico City</option>
+                                        
+                                                    <option  value="-5.0">(UTC -5:00) Eastern Time (US Canada), Bogota, Lima</option>
+                                        
+                                                    <option  value="-4.0">(UTC -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
+                                        
+                                                    <option  value="-3.5">(UTC -3:30) Newfoundland</option>
+                                        
+                                                    <option  value="-3.0">(UTC -3:00) Brazil, Buenos Aires, Georgetown</option>
+                                        
+                                                    <option  value="-2.0">(UTC -2:00) Mid-Atlantic</option>
+                                        
+                                                    <option  value="-1.0">(UTC -1:00 hour) Azores, Cape Verde Islands</option>
+                                        
+                                                    <option  value="0.0">(UTC) Western Europe Time, London, Lisbon, Casablanca</option>
+                                        
+                                                    <option  value="1.0">(UTC +1:00 hour) Brussels, Copenhagen, Madrid, Paris</option>
+                                        
+                                                    <option  value="2.0">(UTC +2:00) Kaliningrad, South Africa</option>
+                                        
+                                                    <option  value="3.0">(UTC +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+                                        
+                                                    <option  value="3.5">(UTC +3:30) Tehran</option>
+                                        
+                                                    <option  value="4.0">(UTC +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+                                        
+                                                    <option  value="4.5">(UTC +4:30) Kabul</option>
+                                        
+                                                    <option  value="5.0">(UTC +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+                                        
+                                                    <option  value="5.5">(UTC +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+                                        
+                                                    <option  value="5.75">(UTC +5:45) Kathmandu</option>
+                                        
+                                                    <option  value="6.0">(UTC +6:00) Almaty, Dhaka, Colombo</option>
+                                        
+                                                    <option  value="7.0">(UTC +7:00) Bangkok, Hanoi, Jakarta</option>
+                                        
+                                                    <option  value="8.0">(UTC +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+                                        
+                                                    <option  value="9.0">(UTC +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+                                        
+                                                    <option  value="9.5">(UTC +9:30) Adelaide, Darwin</option>
+                                        
+                                                    <option  value="10.0">(UTC +10:00) Eastern Australia, Guam, Vladivostok</option>
+                                        
+                                                    <option  value="11.0">(UTC +11:00) Magadan, Solomon Islands, New Caledonia</option>
+                                        
+                                                    <option  value="12.0">(UTC +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+                                        
+                                    </select>
+                                </div>
+                                <div class="btn-radio-area">
+                                    <div class="form-group">
+                                        <div class="btn-radio">
+                                            <input name="meeting_time" id="radio-11" type="radio"
+                                                   class="form-control meeting-time-cls" value="12:15PM" checked>
+                                            <label for="radio-11" class="rdo-label">12:15 PM</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="btn-radio">
+                                            <input id="radio-12" name="meeting_time" type="radio"
+                                                   class="form-control meeting-time-cls" value="01:00PM">
+                                            <label for="radio-12" class="rdo-label">01:00 PM</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="btn-radio">
+                                            <input id="radio-13" name="meeting_time" type="radio"
+                                                   class="form-control meeting-time-cls" value="02:15PM">
+                                            <label for="radio-13" class="rdo-label">02:15 PM</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="btn-radio">
+                                            <input id="radio-14" name="meeting_time" type="radio"
+                                                   class="form-control meeting-time-cls" value="03:00PM">
+                                            <label for="radio-14" class="rdo-label">03:00 PM</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="btn-radio">
+                                            <input id="radio-15" name="meeting_time" type="radio"
+                                                   class="form-control meeting-time-cls" value="04:30PM">
+                                            <label for="radio-15" class="rdo-label">04:30 PM</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="btn-radio">
+                                            <input id="radio-16" name="meeting_time" type="radio"
+                                                   class="form-control meeting-time-cls" value="06:15PM">
+                                            <label for="radio-16" class="rdo-label">06:15 PM</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pl-lg-5">
+                            <div class="schedule-meet-sec">
+                                <h4 class="title4 poppins-semi-bold mb-4">Details</h4>
+                                <div class="form-group">
+                                    <input name="name" type="text" class="form-control"
+                                           placeholder="Full Name">
+                                    <div id="schedule-name-error" class="field-error"></div>
+
+                                </div>
+                                <div class="form-group">
+                                    <input name="email" type="text" class="form-control"
+                                           placeholder="E-Mail">
+                                    <div id="schedule-email-error" class="field-error"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 pr-0">
+                                        <div class="form-group">
+                                            <input type="hidden" id="id_schedule_mobile_number_0" name="mobile_number_0" class="form-control mobile-country-code" value="+1">
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="form-group">
+                                            <input name="mobile_number_1" type="text" class="form-control" placeholder="Phone">
+                                            <div id="schedule-mobile-error" class="field-error"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="schedule-meet-sec">
+                                <h4 class="title4 poppins-semi-bold mb-4">Preferred platform</h4>
+                                <div class="d-flex">
+                                    <div class="checkbox-area form-group mr-4 mr-sm-5">
+                                        <input type="checkbox" id="Skype" name="platform" value="skype">
+                                        <label for="Skype"><img class="ml-2"
+                                                                src="/static/v2/images/skype-icon.svg"/> <span
+                                                class="poppins-semi-bold">Skype</span></label>
+                                    </div>
+                                    <div class="checkbox-area form-group" >
+                                        <input type="checkbox" id="Google" name="platform" value="google" checked>
+                                        <label for="Google"><img class="ml-2"
+                                                                 src="/static/v2/images/google-meet-icon.svg"/>
+                                            <span class="poppins-semi-bold">Google meet</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-blue mr-4" data-dismiss="modal">CANCEL</button>
+                    <button id="schedule-confirm-btn" class="btn btn-outline-blue" type="submit">NEXT
+                    </button>
+                </div>
+        </form>
+    </div>
+</div>
+</div>
+
+
+    <div id="trigger-div" class="trigger-div"></div>
+    
+
+    <script src="/static/v2/js/jquery-2.2.4.min.js"></script>
+    <script src="/static/v2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/v2/js/slick.min.js"></script>
+    <script src="/static/v2/js/semantic.min.js"></script>
+    <script src="/static/v2/js/jquery.ccpicker.min.js"></script>
+    <script type="text/javascript" src="/static/v2/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      
+    
+
+<!-- Calendly badge widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<!-- Calendly badge widget end -->
+
+<script>
+    // Common javascript functions go here
+// using jQuery
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+//career contact form
+
+// Contact form
+$(".mobile-country-code-career").CcPicker({
+  "countryCode":"in",
+  dataUrl:"/static/v2/js/data.json"
+});
+
+// Contact form
+$(".mobile-country-code").CcPicker({
+  "countryCode":"us",
+  dataUrl:"/static/v2/js/data.json"
+});
+
+$('.cc-picker').on('DOMSubtreeModified',function(){
+    setTimeout(function(){
+        $('#id_mobile_0').val('+' + $('#id_mobile_0_phoneCode').val());
+        $('#id_mobile_00').val('+' + $('#id_mobile_00_phoneCode').val());
+        $('#id_mobile_number_0').val('+' + $('#id_mobile_number_0_phoneCode').val());
+        $('#id_schedule_mobile_number_0').val('+' + $('#id_schedule_mobile_number_0_phoneCode').val());
+    }, 500);
+});
+
+var contact_form = $('#contact-form');
+function set_contact_errors(name, email, mobile, project_type, description, file_attachment){
+    $('#contact-name-error').html(name);
+    $('#contact-email-error').html(email);
+    $('#contact-mobile-error').html(mobile);
+    $('#contact-project_type-error').html(project_type);
+    $('#contact-description-error').html(description);
+    $('#contact-file-error').html(file_attachment);
+}
+contact_form.submit(function (e) {
+    e.preventDefault();
+    $('.spinner').show();
+    var submit_btn = $(this).find(':submit');
+    submit_btn.prop('disabled', true);
+    set_contact_errors('', '', '', '', '', '');
+    var data = new FormData(this);
+    $.ajax({
+        type: contact_form.attr('method'),
+        url: contact_form.attr('action'),
+        headers: { "X-CSRFToken": 'tjv9ujehDYSswyAsfy7NsiaLaTzbyDYqtGyTNRbzwRCwXuQWMLKfQH9JBx55Sjla' },
+        data: data,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(data) {
+            $('.spinner').hide();
+            submit_btn.prop('disabled', false);
+            if(data.status == 'error'){
+                set_contact_errors(data.name, data.email, data.mobile, data.project_type, data.description, data.file_attachment);
+            }else{
+               window.location.href = '/thank-you/';
+            }
+        },
+        error: function (error) {
+            contact_form[0].reset();
+        }
+    });
+});
+
+
+// lazyload for background images
+document.addEventListener('lazybeforeunveil', function(e){
+    var bg = e.target.getAttribute('data-bg');
+    if(bg){
+        e.target.style.backgroundImage = 'url(' + bg + ')';
+    }
+});
+
+var schedule_meeting_form = $('#schedule-meeting-form');
+function set_schedule_errors(name, email, mobile){
+    $('#schedule-name-error').html(name);
+    $('#schedule-email-error').html(email);
+    $('#schedule-mobile-error').html(mobile);
+}
+schedule_meeting_form.submit(function (e) {
+    e.preventDefault();
+    $('.spinner').show();
+    var submit_btn = $(this).find(':submit');
+    submit_btn.prop('disabled', true);
+    set_schedule_errors('', '', '');
+    var data = new FormData(this);
+    $.ajax({
+        type: schedule_meeting_form.attr('method'),
+        url: schedule_meeting_form.attr('action'),
+        headers: { "X-CSRFToken": 'tjv9ujehDYSswyAsfy7NsiaLaTzbyDYqtGyTNRbzwRCwXuQWMLKfQH9JBx55Sjla' },
+        data: data,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(data) {
+            $('.spinner').hide();
+            submit_btn.prop('disabled', false);
+            if(data.status == 'error'){
+                set_schedule_errors(data.name, data.email, data.mobile_number);
+                show_hide_meeting_sections(false, true, false);
+            }else{
+               window.location.href = '/thank-you/';
+            }
+        },
+        error: function (error) {
+            schedule_meeting_form[0].reset();
+        }
+    });
+});
+
+// Date picker
+
+        $('#example2').calendar({
+            type: 'date',
+            minDate: new Date()
+        });
+
+// Calendly badge widget end 
+$('#schedule-btn').click(function(){
+    Calendly.initPopupWidget({url:'https://calendly.com/realprad/20-minute-meeting'});
+    return false;
+});
+// Calendly badge widget begin
+</script>
+
+    
+<script>
+    var resource_download_form = $('#resource-download-form');
+    $(document.body).on('click', '.resource-download-btn' ,function(e){
+        $('.resource-download-title').html($(this).attr('data-resource-title'));
+        $('.resource-download-description').html($(this).attr('data-resource-description'));
+        resource_download_form.attr('action', $(this).attr('href'));
+    });
+    function set_resource_download_errors(name, email, mobile){
+        $('#resource-name-error').html(name);
+        $('#resource-email-error').html(email);
+        $('#resource-mobile-error').html(mobile);
+    }
+    resource_download_form.submit(function (e) {
+        e.preventDefault();
+        set_resource_download_errors('', '', '');
+        var data = new FormData(this);
+        $.ajax({
+            type: resource_download_form.attr('method'),
+            url: resource_download_form.attr('action'),
+            headers: { "X-CSRFToken": 'tjv9ujehDYSswyAsfy7NsiaLaTzbyDYqtGyTNRbzwRCwXuQWMLKfQH9JBx55Sjla' },
+            data: data,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function(data) {
+                if(data.status == 'error'){
+                    set_resource_download_errors(data.name, data.email, data.mobile);
+                }else{
+                    set_resource_download_errors('', '', '');
+                    $('#resource-download-modal').modal('hide');
+                    resource_download_form[0].reset();
+                    var a = document.createElement("a");
+                    a.href = data.file_url;
+                    a.download = data.file_name;
+                    document.body.appendChild(a);
+                    a.click();
+                    resource_download_form[0].reset();
+                    window.location.reload();
+                }
+            },
+            error: function (error) {
+                resource_download_form[0].reset();
+            }
+        });
+    });
+</script>
+
+<script>
+
+//table of content
+
+$(document).ready(function() {
+    tableOfContents("#table-cont-box-list");
+});
+
+function tableOfContents(tocList) {
+    $(tocList).empty();
+    var prevH2Item = null;
+    var prevH2List = null;
+    var index = 0;
+
+    $(".blog-detail-box h2, .blog-detail-box h3").each(function() {
+        //insert an anchor to jump to, from the TOC link.
+        var anchor = "<a name='" + index + "'></a>";
+        $(this).before(anchor);
+
+        var li     = "<li><a class='smoothScroll' href='#" + index + "'>" +
+                     $(this).text() + "</a></li>";
+
+        if( $(this).is(" .blog-detail-box h2") ){
+            prevH2List = $("<ul class='sub-list-tag'></ul>");
+            prevH2Item = $(li);
+            prevH2Item.append(prevH2List);
+            prevH2Item.appendTo(tocList);
+        } else {
+            prevH2List.append(li);
+        }
+        index++;
+    });
+
+}
+
+//$('.blog-detail-box h2').each(function() {
+    //$(this).attr('id', $(this).text());
+//});
+//$('.blog-detail-box h3').each(function() {
+    //$(this).attr('id', $(this).text());
+//});
+
+        // Scroll Bar
+          (function($){
+              $(window).on("load",function(){
+                  $(".content").mCustomScrollbar();
+              });
+          })(jQuery);
+
+         // Smooth Scroll
+          $(function() {
+            // This will select everything with the class smoothScroll
+            // This should prevent problems with carousel, scrollspy, etc...
+            $('.smoothScroll').click(function() {
+              if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                  $('html,body').animate({
+                    scrollTop: target.offset().top - 80
+                  }, 1000); // The number here represents the speed of the scroll in milliseconds
+                  return false;
+                }
+              }
+            });
+          });
+
+    var subscribe_form = $('#subscribe-form');
+    function set_subscribe_errors(email){
+    $('#subscribe-email-error').html(email);
+    }
+
+    subscribe_form.submit(function (e) {
+    e.preventDefault();
+    $('.spinner').show();
+    var submit_btn = $(this).find(':submit');
+    submit_btn.prop('disabled', true);
+    set_subscribe_errors('');
+    var data = new FormData(this);
+    $.ajax({
+        type: subscribe_form.attr('method'),
+        url: subscribe_form.attr('action'),
+        headers: { "X-CSRFToken": 'tjv9ujehDYSswyAsfy7NsiaLaTzbyDYqtGyTNRbzwRCwXuQWMLKfQH9JBx55Sjla' },
+        data: data,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(data) {
+            $('.spinner').hide();
+            submit_btn.prop('disabled', false);
+            if(data.status == 'error'){
+                set_subscribe_errors(data.email);
+
+            }else{
+                  $('#valid-subscribe').show()
+                  $('.after-subscribe').hide()
+            }
+        },
+        error: function (error) {
+            subscribe_form[0].reset();
+        }
+    });
+});
+
+//second subscription
+
+var subscribe_form_2 = $('#subscribe-form_2');
+    function set_subscribe_errors_2(email){
+    $('#subscribe-email-error_2').html(email);
+    }
+
+    subscribe_form_2.submit(function (e) {
+    e.preventDefault();
+    $('.spinner').show();
+    var submit_btn = $(this).find(':submit');
+    submit_btn.prop('disabled', true);
+    set_subscribe_errors_2('');
+    var data = new FormData(this);
+    $.ajax({
+        type: subscribe_form_2.attr('method'),
+        url: subscribe_form_2.attr('action'),
+        headers: { "X-CSRFToken": 'tjv9ujehDYSswyAsfy7NsiaLaTzbyDYqtGyTNRbzwRCwXuQWMLKfQH9JBx55Sjla' },
+        data: data,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(data) {
+            $('.spinner').hide();
+            submit_btn.prop('disabled', false);
+            if(data.status == 'error'){
+                set_subscribe_errors_2(data.email);
+
+
+            }else{
+                 $('#valid-subscribe').show()
+                  $('.after-subscribe').hide()
+            }
+        },
+        error: function (error) {
+            subscribe_form_2[0].reset();
+        }
+    });
+});
+
+//Third subscription form
+
+var subscribe_form_3 = $('#subscribe-form_3');
+    function set_subscribe_errors_3(email){
+    $('#subscribe-email-error_3').html(email);
+    }
+
+    subscribe_form_3.submit(function (e) {
+    e.preventDefault();
+    $('.spinner').show();
+    var submit_btn = $(this).find(':submit');
+    submit_btn.prop('disabled', true);
+    set_subscribe_errors_3('');
+    var data = new FormData(this);
+    $.ajax({
+        type: subscribe_form_3.attr('method'),
+        url: subscribe_form_3.attr('action'),
+        headers: { "X-CSRFToken": 'tjv9ujehDYSswyAsfy7NsiaLaTzbyDYqtGyTNRbzwRCwXuQWMLKfQH9JBx55Sjla' },
+        data: data,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(data) {
+            $('.spinner').hide();
+            submit_btn.prop('disabled', false);
+            if(data.status == 'error'){
+                set_subscribe_errors_3(data.email);
+            }else{
+                   $('#valid-subscribe2').show()
+                    $('.after-subscribe2').hide()
+            }
+        },
+        error: function (error) {
+            subscribe_form_3[0].reset();
+        }
+    });
+});
+
+// Accordion Plus Minus
+$(document).ready(function () {
+    // Add minus icon for collapse element which is open by default
+    $(".collapse.show").each(function () {
+       $(this)
+          .prev(".card-header")
+          .find(".fa")
+          .addClass("fa-minus")
+          .removeClass("fa-plus");
+    });
+    
+    // Toggle plus minus icon on show hide of collapse element
+    $(".collapse")
+       .on("show.bs.collapse", function () {
+          $(this)
+          .prev(".card-header")
+          .find(".fa")
+          .removeClass("fa-plus")
+          .addClass("fa-minus");
+       })
+       .on("hide.bs.collapse", function () {
+          $(this)
+          .prev(".card-header")
+          .find(".fa")
+          .removeClass("fa-minus")
+          .addClass("fa-plus");
+       });
+});
+</script>
+
+
+    <!--============== Script Ends ==================-->
+</div>
+</body>
+</html>
